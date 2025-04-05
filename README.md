@@ -28,8 +28,7 @@ const { GoogleDrive } = require('@william-pack/google-drive')
 
 ## How to use
 ### Require
-- Google Service Account only
-- Google Api scopes
+- Google Service Account
 ### Example
 ```ts
 
