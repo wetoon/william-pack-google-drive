@@ -33,6 +33,7 @@ await build({
     },
     naming: 'index.mjs',
     sourcemap: 'none',
+    splitting: false,
     outdir: 'dist',
     format: 'esm',
     target: 'bun'
@@ -47,6 +48,7 @@ await build({
     },
     naming: 'index.cjs',
     sourcemap: 'none',
+    splitting: false,
     outdir: 'dist',
     format: 'cjs',
     target: 'bun'
