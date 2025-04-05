@@ -32,10 +32,10 @@
     "description": "Google library generate oauth2 token",
     "homepage": "https://github.com/wetoon/william-pack-google-drive#readme",
     "keywords": [
+        "upload",
         "google",
-        "oauth2",
-        "refresh",
-        "token"
+        "drive",
+        "file"
     ],
     "engines": {
         "node": ">=18"
