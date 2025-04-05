@@ -37,12 +37,14 @@ const credentials = {
     private_key: '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n'
 }
 
+// Initialize GoogleDrive
 const drive = new GoogleDrive(credentials)
 
+// Create a new file
 async function uploadFile() {
     const file = new File(['Hello World'], 'test.txt', { type: 'text/plain' })
     const options = {
-        parents: ['root'],
+        parents: ['root'], // Folder ID or 'root' for root directory
         mimeType: 'text/plain',
         name: 'test.txt'
     }
@@ -51,9 +53,11 @@ async function uploadFile() {
         const fileId = await drive.create(file, options)
         console.log('File uploaded with ID:', fileId)
         
+        // List all files
         const files = await drive.findAll()
         console.log('My files:', files)
         
+        // Delete the file
         const deleted = await drive.delete(fileId)
         console.log('File deleted:', deleted)
     } catch (error) {
